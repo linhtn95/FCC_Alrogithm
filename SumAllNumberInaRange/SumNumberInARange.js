@@ -2,13 +2,8 @@
 function sumAll(arr) {
     let sum = 0;
 
-    let max = arr.reduce( (a, b) => {
-        return Math.max(a, b);
-    });
-
-    let min = arr.reduce( (a, b) => {
-        return Math.min(a, b);
-    });
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
 
     for(let i = min; i <= max; i++) {
         sum += i;
@@ -17,7 +12,7 @@ function sumAll(arr) {
     return sum;
 }
 
-sumAll([1, 4]);
+console.log(sumAll([1, 5, 4]));
 
 
 
